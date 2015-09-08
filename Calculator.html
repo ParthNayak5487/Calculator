@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+				<script src="https://code.jquery.com/jquery.min.js"></script>
+				<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+				<script src="Calculator.js"></script>
+				<title>Calculator Exercise!</title>
+				<style>
+        body {
+            padding: 20px 0;
+			background: #f0f0f0;
+        }
+
+        #output
+		 {
+            font-family: monospace;
+            text-align: right;
+			float: right;
+			padding: 0 10px;
+			background: rgba(0, 0, 0, 0.2);
+			border-radius: 3px;
+			box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
+			font-size: 17px;
+			line-height: 40px;
+			color: white;
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+			text-align: right;
+			letter-spacing: 1px;
+        }
+		
+		html
+		 {
+			height: 100%;
+			background: white;
+			background: radial-gradient(circle, #fff 20%, #ccc);
+			background-size: cover;
+		 }
+	
+		#calculator
+		{
+			width: 500px;
+			height: auto;
+		
+			padding: 20px 20px 9px;
+		
+			background: #9dd2ea;
+			background: linear-gradient(#9dd2ea, #8bceec);
+			border-radius: 3px;
+			box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+			align : center;
+		}
+   		.keys button
+		{
+			cursor: pointer;
+			border-radius: 3px;
+			box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+			margin: 0 7px 11px 0;
+			user-select: none;
+			transition: all 0.2s ease;
+		}
+
+
+		</style>
+			</head>
+
+			<body>
+
+				<div class="container-fluid col-md-5 col-md-offset-5" id="calculator">
+					<div class="row form-group">
+						<div style="text-align:center">
+							<h4> C  A  L  C  U  L  A  T  O  R </h4>
+						</div>
+						<div class="col-xs-12 ">
+							<input class="form-control" id="output" />
+						</div>
+					</div>
+					<div class="row form-group keys">
+						<div class="col-xs-3">       
+							<button class="form-control btn btn-primary" id="plusminus">+/-</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-primary" id="memoryrecall">MR</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-primary" id="minusmemory">M-</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-primary" id="plusmemory">M+</button>
+						</div>
+					</div>
+					<div class="row form-group keys">
+						<div class="col-xs-3">
+							<button class="form-control btn btn-default" id="num7">7</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-default" id="num8">8</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-default" id="num9">9</button>
+						</div>
+						<div class="col-xs-3">
+
+							<button class="form-control btn btn-primary" id="add">+</button>
+						</div>
+					</div>
+					<div class="row form-group keys">
+						<div class="col-xs-3">
+							<button class="form-control btn btn-default" id="num4">4</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-default" id="num5">5</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-default" id="num6">6</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-primary" id="subtract">-</button>
+						</div>
+					</div>
+					<div class="row form-group keys">
+						<div class="col-xs-3">
+							<button class="form-control btn btn-default" id="num1">1</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-default" id="num2">2</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-default" id="num3">3</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-primary" id="multiplication">*</button>
+						</div>
+					</div>
+					<div class="row form-group keys">
+						<div class="col-xs-3">
+							<button class="form-control btn btn-warning" id="clear">AC</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-default" id="num0">0</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-default" id="dot">.</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-primary" id="divison">/</button>
+						</div>
+					</div>
+					<div class="row form-group keys">
+						<div class="col-xs-3">       
+							<button class="form-control btn btn-primary" id="sqrt">SQRT</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-primary" id="percentage">%</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-danger" id="delete">DEL</button>
+						</div>
+						<div class="col-xs-3">
+							<button class="form-control btn btn-success" id="equals">=</button>
+						</div>
+					</div>
+
+
+
+					<footer>
+						<div class="row form-group">
+							<div style="text-align:center">
+               M A D E    B Y    P A R T H  N A Y A K
+							</div>
+						</div>
+					</footer>
+				</div>
+			</body>
+
+		</html>
+		
